@@ -56,7 +56,7 @@ type GetAttendanceListRecord struct {
 		BaseCheckTime int64 `json:"baseCheckTime"`
 
 		// 关联的审批ID，当该字段非空时，表示打卡记录与请假、加班等审批有关
-		ApproveId string `json:"approveId"`
+		ApproveId int64 `json:"approveId"`
 
 		// 打卡结果：
 		// Normal：正常
