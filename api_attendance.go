@@ -73,6 +73,12 @@ func (ding *DingTalk) GetAttendanceListRecord(res *request.GetAttendanceListReco
 	return rsp, ding.Request(http.MethodPost, constant.GetAttendanceListRecordKey, nil, res, &rsp)
 }
 
+// GetAttendanceLeaveStatus 查询请假状态
+func (ding *DingTalk) GetAttendanceLeaveStatus(res *request.GetAttendanceLeaveStatus) (rsp response.GetAttendanceLeaveStatus,
+	err error) {
+	return rsp, ding.Request(http.MethodPost, constant.GetAttendanceLeaveStatusKey, nil, res, &rsp)
+}
+
 // GetAttendanceGetUpdateData 获取用户考勤数据
 func (ding *DingTalk) GetAttendanceGetUpdateData(res *request.GetAttendanceGetUpdateData) (rsp response.GetAttendanceGetUpdateData,
 	err error) {
